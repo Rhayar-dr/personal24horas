@@ -30,9 +30,9 @@ def get_messages_from_db(number):
 
 @app.route('/bot', methods=['POST'])
 def bot_response():
-    data = request.get_json()
-    number = data.get('From', '')
-    message = data.get('Body', '')
+    
+    number = request.form.get('From', '')
+    message = request.form.get('Body', '')
 
     add_message_to_db(number, message, "human")
 
