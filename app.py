@@ -1,5 +1,4 @@
 from flask import Flask, request, jsonify
-import os
 import sqlite3
 from twilio.twiml.messaging_response import MessagingResponse
 from langchain import LLMChain
