@@ -71,9 +71,9 @@ NUNCA TERMINE A INTERAÇÃO SEM TER MONTADO UM TREINO AO USUÁRIO! Sempre valide
 Previous conversation:
 {chat_history}
 
-New human question: {message}
+New human question: {question}
 Response:"""
-    
+
     prompt = PromptTemplate.from_template(template)
 
     llm = ChatOpenAI(model_name="gpt-3.5-turbo-16k", temperature=0.2)
