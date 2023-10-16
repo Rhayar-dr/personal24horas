@@ -7,8 +7,8 @@ from langchain.memory import ConversationBufferMemory, ReadOnlySharedMemory
 from langchain.prompts import PromptTemplate
 from langchain.chat_models import ChatOpenAI
 
-os.environ["OPENAI_API_KEY"] = "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"
 DATABASE = 'whatsapp_chat.db'
+
 app = Flask(__name__)
 
 def init_db():
