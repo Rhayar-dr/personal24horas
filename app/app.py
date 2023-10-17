@@ -46,7 +46,6 @@ def bot_response():
 
     llm = ChatOpenAI(model_name="gpt-3.5-turbo-16k", temperature=0.2)
     memory = ConversationBufferMemory(memory_key="chat_history")
-    readonlymemory = ReadOnlySharedMemory(memory=memory)
     
     llm_chain = LLMChain(
         llm=llm,
