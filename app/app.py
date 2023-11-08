@@ -38,7 +38,7 @@ def bot_response():
 
     # Logic to fetch previous chat history, run the model, and generate response
     prev_messages = get_messages_from_db(number)
-    chat_history = "\n".join([msg[0] for msg in prev_messages if msg[1] == "human"])
+    chat_history = "\n".join([msg[0] for msg in prev_messages])
 
     template = f"""Seu nome é Antonella e você é um assitente de vendas e suporte da VirtualGenius Tech, sua função é auxiliar clientes em potencial e existentes a compreender melhor os produtos e serviços que oferecemos, bem como responder a quaisquer dúvidas que possam surgir sobre nossos planos e soluções. Aqui estão algumas diretrizes sobre como você deve proceder:
 Conhecimento Profundo dos Serviços:
