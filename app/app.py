@@ -54,11 +54,11 @@ def post_disable_number():
 @app.route('/bot', methods=['POST'])
 def bot_response():
     
-    #data = request.get_json() #para teste interno
-    #number = data.get('From', '') #para teste interno
-    #message = data.get('Body', '') #para teste interno
-    number = request.form.get('From', '')
-    message = request.form.get('Body', '')
+    data = request.get_json() #para teste interno
+    number = data.get('From', '') #para teste interno
+    message = data.get('Body', '') #para teste interno
+    #number = request.form.get('From', '')
+    #message = request.form.get('Body', '')
 
     if check_number_disabled(number):
         return '', 204  # Número desabilitado, retorna 204 No Content
