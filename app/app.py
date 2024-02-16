@@ -53,8 +53,6 @@ def post_disable_number():
 
 @app.route('/bot', methods=['POST'])
 def bot_response():
-
-    init_db()
     
     #data = request.get_json() #para teste interno
     #number = data.get('From', '') #para teste interno
